@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-cn" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-cn" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>为什么要执行严格的代码编写规范？ &mdash; 笔记  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="编程语言代码规范整理" href="reference.html" />
+    <link rel="prev" title="代码规范" href="contents.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 笔记
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">代码规范</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">为什么要执行严格的代码编写规范？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html">编程语言代码规范整理</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">笔记</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="contents.html">代码规范</a> &raquo;</li>
+        
+      <li>为什么要执行严格的代码编写规范？</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/_source/n1-programming-specification/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>为什么要执行严格的代码编写规范？<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>提高代码的可读性</p></li>
+</ul>
+<p>遵守相同编码规范的代码，阅读起来会有统一的风格。具有相同的风格是降低学习曲线的有效方式。可读性的提高使别人理解它所需要的时间最小化。</p>
+<ul class="simple">
+<li><p>提高代码的可维护性</p></li>
+</ul>
+<p>这个可维护性是基于在代码的可读性上，好的源码往往都看上去很漂亮，很有美感。这里说的漂亮和美感不是指代码的逻辑清晰有条理，而是指感官上的视觉感受让人感觉很舒服。富有美感的代码让人赏心悦目，也容易让人读懂。</p>
+<ul class="simple">
+<li><p>能为团队建立脚手架</p></li>
+</ul>
+<p>在一个团队中，不是每一个成员，都拥有相同的知识体系，从而每个成员都有不同的能力上限。</p>
+<p>建立合理的规范，可以建立团队在技术上的沟通的模式，为成员提供了有高度的脚手架，避免成员个体在程序设计上特定弱点所带来的质量短板。</p>
+<p>团队中个人的优势能力决定了团队的质量能力的上限，而编码规范的执行，则决定了团队代码质量的下限。</p>
+<p><strong>总结</strong></p>
+<p>软件开发是一个多人协作的工作，如果没有合理的编码规范，最终导致的是代码混乱。从而导致一些列的问题出现，所以编程规范应该是每一个合格的程序员都需要掌握的能力。</p>
+<p>一些常用语言的规范</p>
+<p>PHP <a class="reference external" href="https://www.php-fig.org/psr/">https://www.php-fig.org/psr/</a>
+Google <a class="reference external" href="https://github.com/google/styleguide">https://github.com/google/styleguide</a>
+Go <a class="reference external" href="https://github.com/golang/go/wiki/CodeReviewComments">https://github.com/golang/go/wiki/CodeReviewComments</a></p>
+<p>离娄之明，公输子之巧，不以规矩，不能成方圆。
+战国·邹·孟轲《孟子·离娄上》</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reference.html" class="btn btn-neutral float-right" title="编程语言代码规范整理" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="contents.html" class="btn btn-neutral float-left" title="代码规范" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, liguo
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
