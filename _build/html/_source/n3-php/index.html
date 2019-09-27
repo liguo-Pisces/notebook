@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>编程语言代码规范整理 &mdash; 笔记  documentation</title>
+  <title>什么是PHP？ &mdash; 笔记  documentation</title>
   
 
   
@@ -34,9 +34,7 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="开发环境配置" href="../n2-environment/contents.html" />
-    <link rel="prev" title="为什么要执行严格的代码编写规范？" href="index.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -80,14 +78,10 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="contents.html">代码规范</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html">为什么要执行严格的代码编写规范？</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">编程语言代码规范整理</a></li>
-</ul>
-</li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../n1-programming-specification/contents.html">代码规范</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../n2-environment/contents.html">开发环境配置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../n3-php/contents.html">PHP: Hypertext Preprocessor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents.html">PHP: Hypertext Preprocessor</a></li>
 </ul>
 
             
@@ -133,15 +127,13 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="contents.html">代码规范</a> &raquo;</li>
-        
-      <li>编程语言代码规范整理</li>
+      <li>什么是PHP？</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/_source/n1-programming-specification/reference.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/_source/n3-php/index.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -154,18 +146,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>编程语言代码规范整理<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="php">
+<h1>什么是PHP？<a class="headerlink" href="#php" title="Permalink to this headline">¶</a></h1>
+<p>PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.</p>
+<p>PHP（“PHP: Hypertext Preprocessor”，超文本预处理器的字母缩写）是一种被广泛应用的开放源代码的多用途脚本语言，它可嵌入到 HTML中，尤其适合 web 开发。</p>
 <ul class="simple">
-<li><p>PHP</p></li>
+<li><p>脚本语言</p></li>
 </ul>
-<p><a class="reference external" href="https://www.php-fig.org/psr/">PHP Standards Recommendations</a></p>
+<p>PHP是脚本语言，所以拥有脚本语言的一些通用特性：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>语法和结构通常比较简单</p></li>
+<li><p>学习和使用通常比较简单</p></li>
+<li><p>通常以容易修改程序的“解释”作为运行方式，而不需要“编译”</p></li>
+<li><p>程序的开发产能优于运行性能</p></li>
+</ul>
+</div></blockquote>
 <ul class="simple">
-<li><p>Python</p></li>
-<li><p>Golang</p></li>
-<li><p>Shell</p></li>
-<li><p>Node</p></li>
+<li><p>解释器（interpreter）</p></li>
 </ul>
+<p>解释器是一种程序，能够把编程语言一行一行解释运行。解释器像是一位“中间人”，每次运行程序时都要先转换成另一种语言再作运行，因此解释器的程序运行速度比较缓慢。它不会一次把整个程序翻译出来，而是每翻译一行程序叙述就立刻运行，然后再翻译下一行，再运行，如此不停地进行下去。</p>
 </div>
 
 
@@ -173,15 +173,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../n2-environment/contents.html" class="btn btn-neutral float-right" title="开发环境配置" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral float-left" title="为什么要执行严格的代码编写规范？" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

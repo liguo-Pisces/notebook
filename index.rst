@@ -9,7 +9,8 @@ Welcome to xxx's documentation!
 .. toctree::
 
     _source/n1-programming-specification/contents
-    _source/n2-enviroment/contents
+    _source/n2-environment/contents
+    _source/n3-php/contents
 
 Indices and tables
 ==================
