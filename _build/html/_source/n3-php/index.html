@@ -34,7 +34,9 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="PHP学习" href="basic.html" />
+    <link rel="prev" title="PHP: Hypertext Preprocessor" href="contents.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -78,10 +80,20 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../n1-programming-specification/contents.html">代码规范</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../n2-environment/contents.html">开发环境配置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contents.html">PHP: Hypertext Preprocessor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">PHP: Hypertext Preprocessor</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">什么是PHP？</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scripting-language">脚本语言（Scripting language）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interpreted-language">解释型语言（Interpreted language）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dynamic-programming-language">动态编程语言（Dynamic programming language）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weakly-typed">弱类型（weakly typed）</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="basic.html">PHP学习</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -127,6 +139,8 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
+          <li><a href="contents.html">PHP: Hypertext Preprocessor</a> &raquo;</li>
+        
       <li>什么是PHP？</li>
     
     
@@ -150,9 +164,9 @@
 <h1>什么是PHP？<a class="headerlink" href="#php" title="Permalink to this headline">¶</a></h1>
 <p>PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.</p>
 <p>PHP（“PHP: Hypertext Preprocessor”，超文本预处理器的字母缩写）是一种被广泛应用的开放源代码的多用途脚本语言，它可嵌入到 HTML中，尤其适合 web 开发。</p>
-<ul class="simple">
-<li><p>脚本语言</p></li>
-</ul>
+<div class="section" id="scripting-language">
+<h2>脚本语言（Scripting language）<a class="headerlink" href="#scripting-language" title="Permalink to this headline">¶</a></h2>
+<p>脚本语言是为了缩短传统的“编写、编译、链接、运行”（edit-compile-link-run）过程而创建的计算机编程语言。早期的脚本语言经常被称为批处理语言或工作控制语言。一个脚本通常是解释运行而非编译。脚本语言通常都有简单、易学、易用的特性，目的就是希望能让程序员快速完成程序的编写工作。而宏语言则可视为脚本语言的分支，两者也有实质上的相同之处。</p>
 <p>PHP是脚本语言，所以拥有脚本语言的一些通用特性：</p>
 <blockquote>
 <div><ul class="simple">
@@ -162,10 +176,54 @@
 <li><p>程序的开发产能优于运行性能</p></li>
 </ul>
 </div></blockquote>
+</div>
+<div class="section" id="interpreted-language">
+<h2>解释型语言（Interpreted language）<a class="headerlink" href="#interpreted-language" title="Permalink to this headline">¶</a></h2>
+<p>解释型语言（Interpreted language）是一种编程语言类型。这种类型的编程语言，会将代码一句一句直接运行，不需要像编译语言（Compiled language）一样，经过编译器先行编译为机器代码，之后再运行。这种编程语言需要利用解释器，在运行期，动态将代码逐句解释（interpret）为机器代码，或是已经预先编译为机器代码的的子程序，之后再运行。</p>
+<p>理论上，任何编程语言都可以是编译式，或解释型的。它们之间的区别，仅与程序的应用有关。许多编程语言同时采用编译器与解释器来实现，其中包括Lisp，Pascal，C，BASIC 与 Python。JAVA及C#采用混合方式，先将代码编译为字节码，在运行时再进行解释。</p>
+<p>PHP执行过程需先编译成中间代码（opcode），再经由特定的虚拟机，翻译成特定的指令被执行。其执行过程如下：</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">PHP5: PHP code -&gt; Token -&gt; Opcodes -&gt; Execute</span>
+<span class="go">PHP7: PHP code -&gt; Token -&gt; AST -&gt; Opcodes -&gt; Execute</span>
+
+<span class="go">1. Token是PHP代码被分割成的有意义的标识。</span>
+<span class="go">2. AST（Abstract Syntax Tree, 抽象语法树）是PHP7版本的特性，之前版本的PHP代码执行过程中没有这一步。它的作用主要是实现了PHP编译器和解析器的解耦，提升了可维护性。</span>
+<span class="go">3. 将AST转化为Opcode，Opcode才能被引擎执行。</span>
+<span class="go">4. Opcodes是Opcode的集合形式，是PHP执行过程中的中间代码。PHP可以通过opcache来缓存Opcodes。通过省去源码到opcode的阶段，引擎直接执行缓存好的Opcode，以提升性能。</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dynamic-programming-language">
+<h2>动态编程语言（Dynamic programming language）<a class="headerlink" href="#dynamic-programming-language" title="Permalink to this headline">¶</a></h2>
+<p>计算机科学中的动态编程语言是一类高级编程语言，它们在运行时执行静态编程语言在编译过程中执行的许多常见编程行为。这些行为可能包括程序的扩展，添加新的代码，扩展对象和定义或修改数据类型。</p>
+<p>动态语言实现的一些特性：</p>
+<ul class="simple">
+<li><p>Eval： 一些动态语言提供了Eval的功能。此函数可以执行一个包含该语言代码的字符串。不建议使用该特性。</p></li>
+<li><p>Object runtime alteration： 类型或者对象通常可以在运行时动态的进行修改。</p></li>
+<li><p>Reflection： 反射是指计算机程序在运行时可以访问、检测和修改它本身状态或行为的一种能力。</p></li>
+<li><p>Macros： 宏在C或C++中是一种静态功能，只能在程序文本上进行字符串替换。但是，在动态语言中，它们提供对编译器内部的访问，并提供对解析器，虚拟机或运行时的完全访问，从而允许定义类型语言的结构，这些结构可以优化代码或修改程序的语法。（TODO）</p></li>
+</ul>
+</div>
+<div class="section" id="weakly-typed">
+<h2>弱类型（weakly typed）<a class="headerlink" href="#weakly-typed" title="Permalink to this headline">¶</a></h2>
+<p>强弱类型（Strong and weak typing）表示在计算机科学以及程序设计中，经常把编程语言的类型系统分为强类型（英语：strongly typed）和弱类型（英语：weakly typed (loosely typed)）两种。这两个术语并没有非常明确的定义，但主要用以描述编程语言对于混入不同数据类型的值进行运算时的处理方式。强类型的语言遇到函数引数类型和实际调用类型不符合的情况经常会直接出错或者编译失败；而弱类型的语言常常会实行隐式转换，或者产生难以意料的结果。</p>
+<p>PHP是弱类型语言，优点是开发效率比较高。</p>
+<p>弱类型语言的缺点比较多。主要体现在：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>不符合 “<a class="reference external" href="https://zh.wikipedia.org/wiki/%E6%89%80%E8%A6%8B%E5%8D%B3%E6%89%80%E5%BE%97">所见即所得（WYSIWYG）</a>” 的设计思路，定义的变量类型是不可预见性并且可以改变的。</p></li>
+<li><p>变量的类型是不可控的，因此执行过程中拥有大量的变量类型 “隐式转换” ，在开发同学不清楚隐式转换规则的情况下，容易产生不可预知的结果。</p></li>
+</ul>
+</div></blockquote>
 <ul class="simple">
 <li><p>解释器（interpreter）</p></li>
 </ul>
 <p>解释器是一种程序，能够把编程语言一行一行解释运行。解释器像是一位“中间人”，每次运行程序时都要先转换成另一种语言再作运行，因此解释器的程序运行速度比较缓慢。它不会一次把整个程序翻译出来，而是每翻译一行程序叙述就立刻运行，然后再翻译下一行，再运行，如此不停地进行下去。</p>
+<ul class="simple">
+<li><p>PHP运行机制</p></li>
+</ul>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Dynamic_programming_language">https://en.wikipedia.org/wiki/Dynamic_programming_language</a>
+<a class="reference external" href="http://www.php-internals.com/book/?p=index">http://www.php-internals.com/book/?p=index</a></p>
+</div>
 </div>
 
 
@@ -173,6 +231,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="basic.html" class="btn btn-neutral float-right" title="PHP学习" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="contents.html" class="btn btn-neutral float-left" title="PHP: Hypertext Preprocessor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

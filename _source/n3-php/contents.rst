@@ -1,7 +1,7 @@
 PHP: Hypertext Preprocessor
-===========================
+==============================
 
-.. totree::
+.. toctree::
 
     index
     basic
