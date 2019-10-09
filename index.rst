@@ -11,6 +11,7 @@ Welcome to xxx's documentation!
     _source/n1-programming-specification/contents
     _source/n2-environment/contents
     _source/n3-php/contents
+    _source/n4-computer-technology/contents
 
 Indices and tables
 ==================

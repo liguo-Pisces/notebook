@@ -53,14 +53,12 @@ PHP7提供了类型声明的特性，可以指定函数参数的类型与返回�
 PHP内核
 -----------------------------
 
-* 解释器（interpreter）
+查阅 `深入理解PHP内核：Thinking In PHP Internals <http://www.php-internals.com/>`_ 
 
-解释器是一种程序，能够把编程语言一行一行解释运行。解释器像是一位“中间人”，每次运行程序时都要先转换成另一种语言再作运行，因此解释器的程序运行速度比较缓慢。它不会一次把整个程序翻译出来，而是每翻译一行程序叙述就立刻运行，然后再翻译下一行，再运行，如此不停地进行下去。
+**参考文献**
 
-* PHP运行机制
-
-
-
-.. [:ref:`AST` ] https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E8%AA%9E%E6%B3%95%E6%A8%B9
-https://en.wikipedia.org/wiki/Dynamic_programming_language
-http://www.php-internals.com/book/?p=index
+* `解释型语言 - 维基 <https://zh.wikipedia.org/wiki/%E7%9B%B4%E8%AD%AF%E8%AA%9E%E8%A8%80>`_
+* `抽象语法树 - 维基 <https://zh.wikipedia.org/wiki/%E6%8A%BD%E8%B1%A1%E8%AA%9E%E6%B3%95%E6%A8%B9>`_
+* `动态编程语言 - 维基 <https://en.wikipedia.org/wiki/Dynamic_programming_language>`_
+* `强弱类型 - 维基 <https://zh.wikipedia.org/wiki/%E5%BC%B7%E5%BC%B1%E5%9E%8B%E5%88%A5>`_
+* `TIPI <http://www.php-internals.com/book/?p=index>`_

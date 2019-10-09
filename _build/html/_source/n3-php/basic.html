@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PHP学习 &mdash; 笔记  documentation</title>
+  <title>PHP基础 &mdash; 笔记  documentation</title>
   
 
   
@@ -34,7 +34,9 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="计算机技术知识" href="../n4-computer-technology/contents.html" />
+    <link rel="prev" title="什么是PHP？" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -78,10 +80,25 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../n1-programming-specification/contents.html">代码规范</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../n2-environment/contents.html">开发环境配置</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contents.html">PHP: Hypertext Preprocessor</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contents.html">PHP: Hypertext Preprocessor</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html">什么是PHP？</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">PHP基础</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">阅读官方文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">PHP的依赖管理工具</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#composer">Composer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pear-php-extension-and-application-repository">Pear: PHP Extension and Application Repository （弃用）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pecl-php-extension-community-library">PECL: PHP Extension Community Library</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#phpextension">PHP安装Extension的方法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../n4-computer-technology/contents.html">计算机技术知识</a></li>
 </ul>
 
             
@@ -127,7 +144,9 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>PHP学习</li>
+          <li><a href="contents.html">PHP: Hypertext Preprocessor</a> &raquo;</li>
+        
+      <li>PHP基础</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -147,19 +166,52 @@
            <div itemprop="articleBody">
             
   <div class="section" id="php">
-<h1>PHP学习<a class="headerlink" href="#php" title="Permalink to this headline">¶</a></h1>
+<h1>PHP基础<a class="headerlink" href="#php" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>阅读官方文档<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>阅读 <a class="reference external" href="https://www.php.net/docs.php">PHP Document</a>。</p>
-<p>PHP的官方文档包含了PHP的所有知识点，文档也非常详细，是学习PHP很好的教材。</p>
+<p>PHP的官方文档包含了PHP的所有的基础知识点，文档也非常详细，是学习PHP很好的教材。</p>
 <ul class="simple">
 <li><p>PHP的简介</p></li>
 <li><p>PHP的安装与配置</p></li>
 <li><p>PHP语法糖</p></li>
 <li><p>PHP扩展库文档</p></li>
 </ul>
-<p>PHP的依赖管理工具 Composer</p>
+</div>
+<div class="section" id="id2">
+<h2>PHP的依赖管理工具<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="composer">
+<h3>Composer<a class="headerlink" href="#composer" title="Permalink to this headline">¶</a></h3>
 <p><strong>Composer</strong> 是PHP用来管理依赖（dependency）关系的工具。你可以在自己的项目中声明所依赖的外部工具库（libraries），Composer会帮你安装这些依赖的库文件。</p>
 <p>Composer的安装与使用在官方文档（<a class="reference external" href="https://getcomposer.org/">Composer官网</a> | <a class="reference external" href="https://www.phpcomposer.com/">Composer中文官网</a>）中有详细的说明，需要认真的阅读。</p>
 <p>若使用Composer下载第三方库慢，可使用中国镜像。配置方法在Composer中文官网可以找到[<a class="reference external" href="https://pkg.phpcomposer.com/">传送门</a>]。</p>
+</div>
+<div class="section" id="pear-php-extension-and-application-repository">
+<h3>Pear: PHP Extension and Application Repository （弃用）<a class="headerlink" href="#pear-php-extension-and-application-repository" title="Permalink to this headline">¶</a></h3>
+<p>PEAR是用于可重用PHP组件的框架和分发系统（PHP官方的）。Pear仓库代码是以包（package）区分。 <strong>包中扩展的功能是用纯PHP代码实现的。</strong> Pear package以phar（PHP归档）、tar或zip发布。若想了解PEAR的更多信息可以去它的 <a class="reference external" href="https://pear.php.net/">Pear Homepage</a> 。</p>
+<p>Pear由于是全局安装扩展包，不同的项目不能使用不同的版本。因此现在基本使用Composer来作为PHP的依赖管理工具。</p>
+</div>
+<div class="section" id="pecl-php-extension-community-library">
+<h3>PECL: PHP Extension Community Library<a class="headerlink" href="#pecl-php-extension-community-library" title="Permalink to this headline">¶</a></h3>
+<p>扩展PHP的方法有两种：</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>使用纯PHP代码开发的包（package）,使用Composer或Pear管理</p></li>
+<li><p>使用C语言编写的外部模块（extension）加载至PHP中，使用Pecl管理。</p></li>
+</ol>
+</div></blockquote>
+<p>Composer或Pear是PHP的上层扩展，Pecl是PHP的底层扩展。</p>
+<p>Pecl extension是使用C语言开发的，通常用于补充一些用PHP难以完成的底层功能，往往需要重新编译或者在配置文件中设置后才能在用户代码中使用。若想了解PECL的更多信息可以去它的 <a class="reference external" href="https://pecl.php.net/">Pecl Homepage</a> 。</p>
+</div>
+<div class="section" id="phpextension">
+<h3>PHP安装Extension的方法<a class="headerlink" href="#phpextension" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>通过Pecl安装， <code class="docutils literal notranslate"><span class="pre">pecl</span> <span class="pre">install</span> <span class="pre">extname</span></code> （推荐）</p></li>
+<li><p>通过源码进行安装，通过 <code class="docutils literal notranslate"><span class="pre">phpize</span></code> 准备PHP扩展库的编译环境。具体安装步骤需要阅读PHP扩展库的安装文档。 <a class="reference external" href="https://www.php.net/manual/en/install.pecl.phpize.php">如何使用phpize编译共享PECL扩展库。</a> （推荐）</p></li>
+<li><p>通过二进制包，一些发行版提供了预编译好的二进制包。</p></li>
+</ol>
+</div>
+</div>
 </div>
 
 
@@ -167,6 +219,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../n4-computer-technology/contents.html" class="btn btn-neutral float-right" title="计算机技术知识" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="什么是PHP？" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
