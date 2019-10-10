@@ -50,3 +50,12 @@ PHP安装Extension的方法
 1. 通过Pecl安装， ``pecl install extname`` （推荐）
 2. 通过源码进行安装，通过 ``phpize`` 准备PHP扩展库的编译环境。具体安装步骤需要阅读PHP扩展库的安装文档。 `如何使用phpize编译共享PECL扩展库。 <https://www.php.net/manual/en/install.pecl.phpize.php>`_ （推荐）
 3. 通过二进制包，一些发行版提供了预编译好的二进制包。
+
+日志
+-------------------------
+
+调试 XDebug
+-------------------------
+
+测试 PHPUnit
+-------------------------
