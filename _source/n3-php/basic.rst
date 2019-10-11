@@ -54,8 +54,24 @@ PHP安装Extension的方法
 日志
 -------------------------
 
+在编程开发中，记录日志是一项非常重要的工作，然而记录日志很容易被程序员忽略。因此记录良好的日志是程序员必备的一项技能。
+
+PHP有一个功能完整且容易扩展的日志类库（ `Monolog <https://github.com/Seldaek/monolog>`_ ）。Monolog能发送你的记录到文件、socket、邮箱和各式各样的Web服务中。在Monolog中的每个Logger实例都有一个channel（唯一的名字）和一个由一个或多个的Handler组成的Stack。当添加一条记录到Logger的时候，它会遍历这个Handler Stack。可以通过Handler的bubble属性来阻塞处理。有许多优秀的PHP Framework中集成了Monolog，值得学习。
+
+最后还要牢记的一点是： **记录优良的日志非常重要**
+
 调试 XDebug
 -------------------------
+
+开发调试的时候方法有很多，可以通过调用输出方法打印数据、记录日志和断点（Breakpoint）。不同的方法在不同的情况下都有它的优势与劣势。
+
+调试工具（如：XDebug）能够让代码在指令组模拟器（ISS）中可以检查运行状况以及选择性地运行，以便排错、调试。当开发的进度遇到瓶颈或找不出哪里有问题时，这技术是非常有用的。但是将程序运行在调试器之下，这将比直接在运作的平台以及处理器上运行还要来的慢。因此，生产环境不会部署调试器。
+
+大部分的主流调试工程，譬如gdb和dbx提供基于主控台的命令提示接口（console-based command line）。调试器前端应用，现在普遍是提供了集成开发工具（IDE）作为调试引擎、动态化、可视化等特点。
+
+Xdebug是PHP的一个extension。 `安装 <https://xdebug.org/docs/install>`_ 方法在Xdebug的官方文档有说明。在这里（https://xdebug.org/wizard）可以通过phpinfo的信息查询对应Xdebug的安装信息。大部分的可配置Debug的编辑器上，都有相应配置Xdebug的说明。在配置环境的时候可以去查阅。
+
+
 
 测试 PHPUnit
 -------------------------

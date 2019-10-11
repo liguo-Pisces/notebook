@@ -21,7 +21,20 @@ syslog
 logrotate
 
 日志的艺术 https://www.cnblogs.com/xybaby/p/7954610.html
+https://www.techug.com/post/the-art-of-logging.html
 
 AMQP
 
+failover
+https://zh.wikipedia.org/wiki/%E6%95%85%E9%9A%9C%E8%BD%AC%E7%A7%BB
 
+PHP内核分析 C语言
+http://www.php-internals.com/book/?p=chapt03/03-01-00-variables-structure
+https://www.yoytang.com/php-7-kernel-note.html
+
+KLS
+https://www.elastic.co/cn/subscriptions
+https://mp.weixin.qq.com/s/MtyLX-UllbnQQ6W0GfFqog
+
+Lisp
+https://acl.readthedocs.io/en/latest/index.html
