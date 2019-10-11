@@ -71,6 +71,12 @@ PHP有一个功能完整且容易扩展的日志类库（ `Monolog <https://gith
 
 Xdebug是PHP的一个extension。 `安装 <https://xdebug.org/docs/install>`_ 方法在Xdebug的官方文档有说明。在这里（https://xdebug.org/wizard）可以通过phpinfo的信息查询对应Xdebug的安装信息。大部分的可配置Debug的编辑器上，都有相应配置Xdebug的说明。在配置环境的时候可以去查阅。
 
+XDebug工作原理：
+
+1. 客户端（IDE）中集成了遵循BGDp的Xdebug插件，当需要debug的时候，启用这个插件，这个插件会启动一个端口（默认为：9000）来监听远程服务器发过来的debug信息。
+2. 浏览器向Web服务器发送一个带有 **XDEBUG_SESSION_START** 的参数请求。Web服务器需要安装的PHP的xdebug extension。
+3. PHP检测到请求中含有 **XDEBUG_SESSION_START** 参数，就会告诉xdebug，xdebug会指定IP与指定Port（静态绑定Host与动态绑定Host, xdebug.remote_connect_back配置决定，默认为静态）发送一个debug请求，然后客户端响应这个请求，debug就开始了。
+4. 
 
 
 测试 PHPUnit
