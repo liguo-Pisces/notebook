@@ -60,6 +60,11 @@ PHP有一个功能完整且容易扩展的日志类库（ `Monolog <https://gith
 
 最后还要牢记的一点是： **记录优良的日志非常重要**
 
+测试 PHPUnit
+-------------------------
+
+
+
 调试 XDebug
 -------------------------
 
@@ -76,8 +81,9 @@ XDebug工作原理：
 1. 客户端（IDE）中集成了遵循BGDp的Xdebug插件，当需要debug的时候，启用这个插件，这个插件会启动一个端口（默认为：9000）来监听远程服务器发过来的debug信息。
 2. 浏览器向Web服务器发送一个带有 **XDEBUG_SESSION_START** 的参数请求。Web服务器需要安装的PHP的xdebug extension。
 3. PHP检测到请求中含有 **XDEBUG_SESSION_START** 参数，就会告诉xdebug，xdebug会指定IP与指定Port（静态绑定Host与动态绑定Host, xdebug.remote_connect_back配置决定，默认为静态）发送一个debug请求，然后客户端响应这个请求，debug就开始了。
-4. 
+4. PHP就开始逐行执行代码，但是没执行一行都会让xdebug过滤一下，xdebug每过滤一行代码，都会暂停（Pause）代码的执行，然后向客户端指定端口发送该行代码的执行情况，等待客户端的决策。
+5. 相应，客户端（IDE）收到xdebug发过来的信息，将会可视化的展示给开发者查阅。同时向xdebug发送下一步的操作。
 
+**参考资料**
 
-测试 PHPUnit
--------------------------
+`XDEBUG从入门到精通 <https://segmentfault.com/a/1190000016325041>`_ 讲解了PHPStrom怎么配置XDebug
