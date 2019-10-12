@@ -38,3 +38,6 @@ https://mp.weixin.qq.com/s/MtyLX-UllbnQQ6W0GfFqog
 
 Lisp
 https://acl.readthedocs.io/en/latest/index.html
+
+开发模式对比
+https://www.cnblogs.com/-oyk/archive/2012/10/08/2714669.html
