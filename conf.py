@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = '笔记'
+project = u'笔记'
 copyright = '2019, liguo'
 author = 'liguo'
 
